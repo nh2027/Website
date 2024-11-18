@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Heriot Watt Clubs Timetable</title>
+    <style>
+        :root {
+            --primary-color: #004AAD;
+            --secondary-color: #6c757d;
+            --background-color: #eef1f7;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            background-color: var(--background-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .content {
+            flex: 1; /* Pushes footer to the bottom when content is short */
+        }
+
+        .timetable-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 1100px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .table-header {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .timetable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .timetable th, .timetable td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .timetable th {
+            background-color: #f9f9f9;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .timetable tr:nth-child(even) {
+            background-color: #f8faff;
+        }
+
+        .club-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: white;
+            margin: 5px;
+            text-transform: capitalize;
+        }
+
+        .club-badge-primary {
+            background-color: #007bff;
+        }
+
+        .club-badge-success {
+            background-color: #28a745;
+        }
+
+        .club-badge-warning {
+            background-color: #ffc107;
+            color: #212529;
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#004AAD;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Heriot Watt Clubs</a> <!-- Link to home page -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a> <!-- Link to home page -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/timetable">Timetable</a>
+                </li>
+               <li class="nav-item">
+    <a class="nav-link active" href="/signin">Sign in</a> <!-- Ensure this points to the correct route -->
+</li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="container">
+            <div class="timetable-container">
+                <h2 class="text-center mb-4">Clubs Weekly Timetable</h2>
+                <div class="table-header">Plan Your Week</div>
+                <table class="timetable">
+                    <thead>
+                        <tr>
+                            <th>Day / Time</th>
+                            <th>15:00</th>
+                            <th>16:00</th>
+                            <th>17:00</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Monday</th>
+                            <td>
+                                <span class="club-badge club-badge-primary">Media Club</span>
+                            </td>
+                            <td>
+                                <span class="club-badge club-badge-success">Chess Club</span>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Tuesday</th>
+                            <td></td>
+                            <td>
+                                <span class="club-badge club-badge-warning">Gaming Club</span>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Wednesday</th>
+                            <td>
+                                <span class="club-badge club-badge-primary">Football Club</span>
+                            </td>
+                            <td></td>
+                            <td>
+                                <span class="club-badge club-badge-success">Music Club</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Thursday</th>
+                            <td>
+                                <span class="club-badge club-badge-warning">Drama Club</span>
+                            </td>
+                            <td>
+                                <span class="club-badge club-badge-primary">Fashion Club</span>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Friday</th>
+                            <td>
+                                <span class="club-badge club-badge-success">Basketball Club</span>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="mb-0">© 2024 Heriot Watt University. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

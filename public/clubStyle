@@ -1,0 +1,54 @@
+/* Body background with the image */
+body {
+    background: url('/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #0d3b66; /* Fallback color */
+    color: #ffffff;
+}
+
+/* Main content container */
+.content-container {
+    background-color: rgba(18, 52, 86, 0.9); /* Adds slight transparency */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1; /* Ensures content appears on top */
+    position: relative;
+}
+
+/* Other styles */
+.navbar-brand {
+    font-weight: bold;
+}
+
+.club-image {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+.info-box {
+    background-color: #336699;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.social-icon:hover {
+    color: #ffcc00;
+}
+
+.footer {
+    font-size: 0.9rem;
+    color: #ffffff;
+}

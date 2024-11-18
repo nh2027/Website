@@ -1,0 +1,192 @@
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #004AAD !important;
+    height: 56px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+.navbar-brand:hover {
+    color: white !important;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+/* Content wrapper */
+.content-wrapper {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Background image */
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Card container */
+.card-container {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 90%;
+    max-width: 18rem;
+}
+
+/* Custom card styling */
+.custom-card {
+    background-color: transparent;
+    color: white;
+    border: none;
+    width: 100%;
+}
+
+.custom-card .list-group-item {
+    background-color: #2AA6CF;
+    border: 1px solid white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 0.5rem;
+    margin-bottom: 10px;
+}
+
+.custom-card .list-group-item:last-child {
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+/* Club grid container */
+.club-grid-container {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 90%;
+    max-width: 300px;
+}
+
+/* Club grid styling */
+.club-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 300px;
+    width: 100%;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: stretch;
+}
+
+/* Club item styling */
+.club-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 100%;
+}
+
+.club-item i {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.club-item p {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: center;
+}
+.club-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.club-link:hover {
+    color: inherit;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer */
+.footer {
+    background-color: #004AAD;
+    padding: 10px 0;
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+.footer .text-center {
+    margin: 0;
+}
+
+/* Timetable styles */
+.table-responsive {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table-dark {
+    color: white;
+    background-color: #004AAD;
+}

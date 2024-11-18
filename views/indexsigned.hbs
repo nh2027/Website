@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Heriot Watt Clubs</title>
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background-color: #f4f4f4; 
+            color: #333; 
+        }
+        .navbar { 
+            background-color: #003 366; 
+        }
+        .navbar-brand, .nav-link { 
+            color: #fff !important; 
+        }
+        .hero-section { 
+            background: url('/background.jpg') no-repeat center center; 
+            background-size: cover; 
+            height: 50vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: #fff; 
+            text-align: center; 
+        }
+        .hero-content { 
+            background-color: rgba(0, 0, 0, 0.6); 
+            padding: 2rem; 
+            border-radius: 10px; 
+        }
+        .join-club-section { 
+            padding: 3rem 0; 
+        }
+        .join-club-item { 
+            background-color: #fff; 
+            border: 2px solid #003366; 
+            border-radius: 10px; 
+            padding: 1.5rem; 
+            margin-bottom: 1rem; 
+            position: relative; 
+        }
+        .close-btn { 
+            position: absolute; 
+            top: 10px; 
+            right: 10px; 
+            background: none; 
+            border: none; 
+            color: #003366; 
+            font-size: 1.5rem; 
+            cursor: pointer; 
+        }
+        .club-grid-section { 
+            background-color: #f4f4f4; 
+            padding: 3rem 0; 
+        }
+        .club-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 2rem; 
+        }
+        .club-item { 
+            background-color: rgba(255, 255, 255, 0.1); 
+            border-radius: 10px; 
+            padding: 1.5rem; 
+            text-align: center; 
+            transition: transform 0.3s; 
+        }
+        .club-item:hover { 
+            transform: translateY(-5px); 
+        }
+        .club-item i { 
+            font-size: 2.5rem; 
+        }
+        footer { 
+            background-color: #003366; 
+            color: #fff; 
+            padding: 1rem 0; 
+            text-align: center; 
+        }
+        .club-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#004AAD;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Heriot Watt Clubs</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/timetable">Timetable</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{username}}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
+                            <li>
+                                <a class="dropdown-item" href="#" id="logoutLink">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Discover Your Passion</h1>
+            <p>Join a club and make the most of your university experience</p>
+        </div>
+    </section>
+
+    <section class="join-club-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Join a Club</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="join-club-item">
+                        <h3>Join a Club</h3>
+                        < button class="close-btn">&times;</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="join-club-item">
+                        <h3>Join a Club</h3>
+                        <button class="close-btn">&times;</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="join-club-item">
+                        <h3>Join a Club</h3>
+                        <button class="close-btn">&times;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="club-grid-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Explore Our Clubs</h2>
+            <div class="club-grid">
+                <div class="club-item">
+                    <a href="/chessclub">
+                        <i class="fa-solid fa-chess"></i>
+                        <h3>Chess Club</h3>
+                    </a>
+                </div>
+                <div class="club-item">
+                    <a href="/gamingclub">
+                        <i class="fa-solid fa-gamepad"></i>
+                        <h3>Gaming Club</h3>
+                    </a>
+                </div>
+                <div class="club-item">
+                    <a href="/musicclub">
+                        <i class="fa-solid fa-music"></i>
+                        <h3>Music Club</h3>
+                    </a>
+                </div>
+                <div class="club-item">
+                    <a href="/dramaclub">
+                        <i class="fa-solid fa-film"></i>
+                        <h3>Drama Club</h3>
+                    </a>
+                </div>
+                <div class="club-item">
+                    <a href="/debateclub">
+                        <i class="fa-solid fa-comments"></i>
+                        <h3>Debate Club</h3>
+                    </a>
+                </div>
+                <div class="club-item">
+                    <a href="/fashionclub">
+                        <i class="fa-solid fa-shirt"></i>
+                        <h3>Fashion Club</h3>
+                    </a>
+                </div>
+                <div class="club-item">
+                    <a href="/footballclub">
+                        <i class="fa-solid fa-futbol"></i>
+                        <h3>Football Club</h3>
+                    </a>
+                </div>
+                <div class="club-item">
+                    <a href="/mediaclub">
+                        <i class="fa-solid fa-camera"></i>
+                        <h3>Media Club</h3>
+                    </a>
+                </div>
+                <div class="club-item">
+                    <a href="/basketballclub">
+                        <i class="fa-solid fa-basketball"></i>
+                        <h3>Basketball Club</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>All rights reserved to Heriot Watt University</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('logoutLink').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.location.href = '/logout'; // Redirect to the logout route
+        });
+    </script>
+</body>
+</html>
